@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-grid</title>
+    <style>
+        #nav{
+            background-color: rgb(65, 56, 56);
+            color: white;
+            font-size: 15px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 15px 0px 15px;
+            box-shadow: rgba(153, 153, 155, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+        #nav div{
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid white; */
+            width:200px
+        }
+        .cont{
+            /* border: 2px solid red; */
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .cont div{
+            margin: 8px;
+            flex-direction: row;
+            text-align: center;
+            padding: 8px;
+            background: rgb(135, 217, 217);
+            border-radius: 20px 20px 0px 0px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+        img{
+            width:250px;
+            height:250px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="nav">
+        <h1>MASAI</h1>
+        <div>
+            <p>Home</p>
+            <p>About</p>
+            <p>Gallery</p>
+        </div>
+    </nav>
+    <!-- <br> -->
+    <div class="cont">
+        <div>
+            <img src="https://th.bing.com/th?id=OIP.1d6tBbNiJTFQNEK_k0sSjQHaFj&w=288&h=216&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="image">
+            <h2>Relief</h2>
+        </div>
+        <div>
+            <img src="https://www.bing.com/th?id=OIP.P8fJWbgoZs1jfbe7aaTLHQHaEK&w=166&h=100&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="image">
+            <h2>Peace</h2>
+        </div>
+        <div>
+            <img src="https://www.bing.com/th?id=OIP.3MxqaJv2Z5QsG7wIXzizjAHaEo&w=188&h=106&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="image">
+            <h2>Happiness</h2>
+        </div>
+        <div>
+            <img src="https://www.bing.com/th?id=OIP.m4FmOjk0Bx-N4JaBzsBoTgHaEP&w=163&h=100&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="image">
+            <h2>Enjoy</h2>
+        </div>
+        <div>
+            <img src="https://www.bing.com/th?id=OIP.gwvaCTBDdkKS-TU9IQcjngHaFj&w=124&h=100&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="image">
+            <h2>Prosperity</h2>
+        </div>
+        <div>
+            <img src="https://www.bing.com/th?id=OIP.NOH8bBZLrC_5WpwupOJNkwHaEX&w=198&h=104&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="image">
+            <h2>Silence</h2>
+        </div>
+        <div>
+            <img src="https://www.bing.com/th?id=OIP.cfxVoPK-zXAsxKiTmA3qVwHaFj&w=163&h=104&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="image">
+            <h2>Life</h2>
+        </div>
+        <div>
+            <img src="https://www.bing.com/th?id=OIP.wwxK07x0Umfnh0l-nrjxjgHaDg&w=243&h=104&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="image">
+            <h2>Beauty</h2>
+        </div>
+    </div>
+   
+</body>
+</html>
