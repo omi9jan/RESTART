@@ -1,0 +1,170 @@
+for(let i=1; i<3; i++)
+    {
+        for(let j=1; j<5; j++)
+        {
+            console.log("Hii-",j);
+        }
+    }
+//output:
+//Hii- 1
+// Hii- 2
+// Hii- 3
+// Hii- 4
+// Hii- 1
+// Hii- 2
+// Hii- 3
+// Hii- 4
+ 
+ 
+let bag='';
+    for(let i=1; i<3; i++)
+    {
+        for(let j=1; j<5; j++)
+        {
+            bag=bag+"* ";
+            console.log("bag-",j,bag);
+        }
+    }
+ 
+//output:
+// bag- 1 *
+// bag- 2 * *
+// bag- 3 * * *
+// bag- 4 * * * *
+// bag- 1 * * * * *
+// bag- 2 * * * * * *
+// bag- 3 * * * * * * *
+// bag- 4 * * * * * * * *
+ 
+ 
+ 
+// In this pseudo code u take bag outside so outcome comes like this
+//for Farm-2 we didn't get empty bag to fill new seeds
+let bag1="";
+   for(let farm=1; farm<=5; farm++)
+   {
+    console.log("Farm No.-",farm);
+    for(let seed=1; seed<=3; seed++)
+    {
+        bag1=bag1+"*"+" ";
+        console.log(bag1);
+    }
+   }
+ 
+//output:
+// Farm No.- 1
+// *
+// * *
+// * * *
+// Farm No.- 2
+// * * * *
+// * * * * *
+// * * * * * *
+// Farm No.- 3
+// * * * * * * *
+// * * * * * * * *
+// * * * * * * * * *
+// Farm No.- 4
+// * * * * * * * * * *
+// * * * * * * * * * * *
+// * * * * * * * * * * * *
+// Farm No.- 5
+// * * * * * * * * * * * * *
+// * * * * * * * * * * * * * *
+// * * * * * * * * * * * * * * *
+ 
+ 
+//We correct previous error in this problem by taking bag1 inside the,
+//so that at each new Farm we can fill seeds in new Empty bag
+for(let farm=1; farm<=5; farm++)
+   {
+    let bag1="";
+    console.log("Farm No.-",farm);
+    for(let seed=1; seed<=3; seed++)
+    {
+        bag1=bag1+"*"+" ";
+        console.log(bag1);
+    }
+   }
+ 
+//Output:
+// Farm No.- 1
+// *
+// * *
+// * * *
+// Farm No.- 2
+// *
+// * *
+// * * *
+// Farm No.- 3
+// *
+// * *
+// * * *
+// Farm No.- 4
+// *
+// * *
+// * * *
+// Farm No.- 5
+// *
+// * *
+// * * *
+ 
+ 
+for(let Farm=1; Farm<=5; Farm++)
+   {
+    let Sack = "";
+    console.log("Farm No.-",Farm);
+    for(let Seed=1; Seed<=3; Seed++)
+    {
+        Sack = Sack + "*" + " ";
+    }
+    console.log(Sack);
+   }
+ 
+//Output
+// Farm No.- 1
+// * * *
+// Farm No.- 2
+// * * *
+// Farm No.- 3
+// * * *
+// Farm No.- 4
+// * * *
+// Farm No.- 5
+// * * *
+ 
+ 
+//This pseudo code done by using FOR Loop
+let sac="";
+    for(let i=1; i<=5; i++)
+    {
+        sac=sac+"*";
+        console.log("Farm No.-"+i+sac);
+    }
+ 
+//Output
+// Farm No.-1*
+// Farm No.-2**
+// Farm No.-3***
+// Farm No.-4****
+// Farm No.-5*****
+ 
+//Done previous pseudo code by using NESTED-FOR Loop
+//Obtain same Output
+ 
+for(let farm=1; farm<=5; farm++)
+    {
+        let sac1="";
+        for(let seed=1; seed<=farm; seed++)
+        {
+            sac1=sac1+"*";
+        }
+        console.log("Farm No.-"+farm,sac1);
+    }
+ 
+    //Output:
+// Farm No.-1 *
+// Farm No.-2 **
+// Farm No.-3 ***
+// Farm No.-4 ****
+// Farm No.-5 *****
