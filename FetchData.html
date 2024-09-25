@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch data</title>
+    <style>
+        /* #container.div.image{
+            width: 200px;
+            height: 200px;
+        } */
+        h1{
+            font-size: 20px;
+        }
+        p{
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    let container = document.getElementById('container');
+ 
+// fetching the data
+    fetch('https://fakestoreapi.com/products')
+    .then((responseObject) => {
+        //here we will get readable string
+        console.log(responseObject);
+        //using .json() to covert readleable string into data
+        return(responseObject.json());
+    })
+    .then((result) => {
+        console.log('Result :- ',result);
+        let actualData = result;
+    // providing data for mapping
+        displayProducts(actualData);
+    })
+ 
+// mapping the data in the container from api
+    function displayProducts (data){
+        data.forEach(element => {
+            let product = document.createElement('div');
+ 
+            let image = document.createElement('img');
+            image.setAttribute ('src',element.image);
+            image.style.height = '200px';
+            image.style.width = '200px';
+ 
+            let title = document.createElement('h1');
+            title.innerText = element.title;
+ 
+            let desc = document.createElement('p');
+            desc.innerText = element.description;
+ 
+            let prize = document.createElement('h4');
+            prize.innerText = element.price + ' Rs';
+ 
+            product.append(image, title, desc, prize);
+            container.append(product);
+        });
+    }
+</script>
