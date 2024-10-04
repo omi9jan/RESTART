@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMBD Movies</title>
+</head>
+<style>
+    #container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+    }
+    #container div{
+        border: 1px solid black;
+        text-align: center;
+    }
+    #container div img{
+        width: 80%;
+        height: 300px
+    }
+</style>
+<body>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    let Container = document.getElementById('container');
+ 
+    fetch('https://www.omdbapi.com/?apiKey=deb9fa83&s=avengers')
+    .then((responseObject) => {
+        console.log("ResponseObject",responseObject);
+        let Result = responseObject.json();
+        console.log("Result:",Result)
+        return(Result)
+    })
+    .then((res)=>{
+        console.log('res:',res.Search)
+        let data = res.Search;
+        Movies(data);
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+ 
+    function Movies(data){
+        console.log('data:',data)
+        data.map((ele)=>{
+            let product = document.createElement('div');
+            let img = document.createElement('img');
+            img.src = ele.Poster;
+            let title = document.createElement('h2');
+            title.innerText = ele.Title;
+            let year = document.createElement('p');
+            year.innerText=ele.Year;
+ 
+            product.append(img,title,year);
+            Container.append(product);
+        })    
+    }
+ 
+</script>
